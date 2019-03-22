@@ -1,0 +1,66 @@
+Hi there,
+
+An infinite recursion was discovered in eval.c in Libasm, as distributed in Netwide Assembler (NASM) 2.14.03rc1. There is a stack exhaustion problem resulting from infinite recursion in the functions expr6, expr5, expr4, expr3, expr2, expr1, expr0 in eval.c, in certain scenarios involving lots of '{' characters.
+
+Here is the POC file. Please use the ¡°./nasm -f bin $POC -o /dev/null¡± to reproduce the bug.
+Command£º¡°./nasm -f bin $POC -o /dev/null ¡±
+
+
+$git log
+
+> commit 81f98fe79be23174e2d6ddd9f17a5cfb9ca71ec7
+> Author: H. Peter Anvin <hpa@zytor.com>
+> Date:   Thu Dec 27 11:34:12 2018 -0800
+> 
+>     NASM 2.14.03rc1
+
+
+The ASAN dumps the stack trace as follows:
+
+> AddressSanitizer:DEADLYSIGNAL
+> =================================================================
+> ==191091==ERROR: AddressSanitizer: stack-overflow on address 0x7ffeca6c9bb8 (pc 0x0000005d8ced bp 0x7ffeca6ca2b0 sp 0x7ffeca6c9bc0 T0)
+>     #0 0x5d8cec in stdscan /nasm/asm/stdscan.c:126
+>     #1 0x5cba62 in scan /nasm/asm/eval.c:263:17
+>     #2 0x5ccaa0 in expr6 /nasm/asm/eval.c:914:9
+>     #3 0x5d3b20 in expr5 /nasm/asm/eval.c:627:9
+>     #4 0x5d36fd in expr4 /nasm/asm/eval.c:602:9
+>     #5 0x5d2fbd in expr3 /nasm/asm/eval.c:563:9
+>     #6 0x5d2b4d in expr2 /nasm/asm/eval.c:537:9
+>     #7 0x5d26dd in expr1 /nasm/asm/eval.c:511:9
+>     #8 0x5d226d in expr0 /nasm/asm/eval.c:485:9
+>     #9 0x5d1270 in rexp3 /nasm/asm/eval.c:422:9
+>     #10 0x5d0d7d in rexp2 /nasm/asm/eval.c:396:9
+>     #11 0x5d086d in rexp1 /nasm/asm/eval.c:369:9
+>     #12 0x5d037d in rexp0 /nasm/asm/eval.c:342:9
+>     #13 0x5cfe5d in cexpr /nasm/asm/eval.c:305:9
+>     #14 0x5cbabd in bexpr /nasm/asm/eval.c:298:12
+>     #15 0x5ccaab in expr6 /nasm/asm/eval.c:915:13
+>     #16 0x5d3b20 in expr5 /nasm/asm/eval.c:627:9
+>     #17 0x5d36fd in expr4 /nasm/asm/eval.c:602:9
+>     #18 0x5d2fbd in expr3 /nasm/asm/eval.c:563:9
+>     #19 0x5d2b4d in expr2 /nasm/asm/eval.c:537:9
+>     #20 0x5d26dd in expr1 /nasm/asm/eval.c:511:9
+>     #21 0x5d226d in expr0 /nasm/asm/eval.c:485:9
+>     #22 0x5d1270 in rexp3 /nasm/asm/eval.c:422:9
+>     #23 0x5d0d7d in rexp2 /nasm/asm/eval.c:396:9
+>     #24 0x5d086d in rexp1 /nasm/asm/eval.c:369:9
+>     #25 0x5d037d in rexp0 /nasm/asm/eval.c:342:9
+>     #26 0x5cfe5d in cexpr /nasm/asm/eval.c:305:9
+>     #27 0x5cbabd in bexpr /nasm/asm/eval.c:298:12
+>     #28 0x5ccaab in expr6 /nasm/asm/eval.c:915:13
+>     #29 0x5d3b20 in expr5 /nasm/asm/eval.c:627:9
+>     #30 0x5d36fd in expr4 /nasm/asm/eval.c:602:9
+>     #31 0x5d2fbd in expr3 /nasm/asm/eval.c:563:9
+>     #32 0x5d2b4d in expr2 /nasm/asm/eval.c:537:9
+>     #33 0x5d26dd in expr1 /nasm/asm/eval.c:511:9
+>     ...
+>     ...
+>     #245 0x5d086d in rexp1 /nasm/asm/eval.c:369:9
+>     #246 0x5d037d in rexp0 /nasm/asm/eval.c:342:9
+>     #247 0x5cfe5d in cexpr /nasm/asm/eval.c:305:9
+>     #248 0x5cbabd in bexpr /nasm/asm/eval.c:298:12
+>     #249 0x5ccaab in expr6 /nasm/asm/eval.c:915:13
+> 
+> SUMMARY: AddressSanitizer: stack-overflow /nasm/asm/stdscan.c:126 in stdscan
+> ==191091==ABORTING

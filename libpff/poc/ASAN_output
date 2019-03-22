@@ -1,0 +1,43 @@
+malloc
+
+
+#0  libpff_index_value_initialize (index_value=0x7fffffffd458, error=0x7fffffffd988) at libpff_index_value.c:62
+#1  0x000000000045df0a in libpff_index_read_node_data (index=0x7084d0, file_io_handle=0x707160, node=0x708550, 
+    cache=0x7086b0, node_data_file_index=0, node_data_offset=1, node_data_size=0, node_data_flags=0, 
+    read_flags=0 '\000', error=0x7fffffffd988) at libpff_index.c:893
+#2  0x000000000044fd87 in libfdata_tree_get_node_value (tree=0x708500, file_io_handle=0x707160, cache=0x7086b0, 
+    node=0x708550, node_value=0x7fffffffd5d8, read_flags=0 '\000', error=0x7fffffffd988) at libfdata_tree.c:627
+#3  0x0000000000451dd0 in libfdata_tree_node_get_number_of_sub_nodes (node=0x708550, file_io_handle=0x707160, 
+    cache=0x7086b0, number_of_sub_nodes=0x7fffffffd690, read_flags=0 '\000', error=0x7fffffffd988)
+    at libfdata_tree_node.c:1015
+#4  0x000000000040cd08 in libpff_item_tree_create_node (item_tree_root_node=0x708990, file_io_handle=0x707160, 
+    descriptor_index_tree=0x708500, descriptor_index_tree_node=0x708550, index_tree_cache=0x7086b0, 
+    orphan_node_list=0x708940, root_folder_item_tree_node=0x707070, error=0x7fffffffd988)
+    at libpff_item_tree.c:475
+#5  0x000000000040db94 in libpff_item_tree_create (item_tree_root_node=0x707068, file_io_handle=0x707160, 
+    descriptors_index=0x7084a0, orphan_node_list=0x708940, root_folder_item_tree_node=0x707070, 
+    error=0x7fffffffd988) at libpff_item_tree.c:1211
+#6  0x00000000004046d3 in libpff_file_open_read (internal_file=0x707040, file_io_handle=0x707160, 
+    error=0x7fffffffd988) at libpff_file.c:1042
+#7  0x00000000004041ff in libpff_file_open_file_io_handle (file=0x707040, file_io_handle=0x707160, 
+    access_flags=1, error=0x7fffffffd988) at libpff_file.c:580
+#8  0x0000000000403f37 in libpff_file_open (file=0x707040, filename=0x7fffffffdecb "48", access_flags=1, 
+    error=0x7fffffffd988) at libpff_file.c:322
+#9  0x00000000004016eb in info_handle_open_input (info_handle=0x707010, filename=0x7fffffffdecb "48", 
+    error=0x7fffffffd988) at info_handle.c:298
+
+
+
+libpff_item_tree_create_node: root folder item tree node already set.
+libpff_item_tree_create_node: unable to create index tree from descriptor index tree parent node: 1094795585.
+libpff_item_tree_create_node: unable to create index tree from descriptor index tree sub node: 16.
+libpff_item_tree_create_node: unable to create index tree from descriptor index tree sub node: 0.
+libpff_item_tree_create: unable to create item tree.
+libpff_file_open_read: unable to create item tree.
+libpff_file_open_file_io_handle: unable to read from file handle.
+libpff_file_open: unable to open file: 48.
+info_handle_open_input: unable to open input file.
+
+
+
+

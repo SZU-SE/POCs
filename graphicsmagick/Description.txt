@@ -1,0 +1,5 @@
+Download: http://www.graphicsmagick.org/download.html#download-sites
+
+Command: gm convert $POC OUTPUT
+
+CVE-2018-5685: https://sourceforge.net/p/graphicsmagick/bugs/541/
