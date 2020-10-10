@@ -1,0 +1,5 @@
+Download: https://gitlab.com/libtiff/libtiff
+
+Command:  tiff2pdf $POC -o OUTPUT
+
+CVE-2018-5784: http://bugzilla.maptools.org/show_bug.cgi?id=2772

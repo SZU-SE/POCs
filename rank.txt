@@ -1,0 +1,173 @@
+11 - libpng
+10 - libpcap
+10 - libjpeg
+9 - tcpdump (libpcap)
+9 - binutils
+8 - libpoppler
+7 - objdump (binutils)
+6 - nm (binutils)
+6 - mupdf
+6 - gif2png (libpng)
+6 - djpeg (libjpeg)
+5 - readelf (binutils)
+5 - pdf2svg (libpoppler)
+5 - libtiff
+5 - ffmpeg
+4 - size (binutils)
+4 - libxml2
+3 - tcptrace (libpcap)
+3 - jhead
+3 - c++filt (binutils)
+3 - ImageMagick
+2 - xpdf
+2 - tiff2ps (libtiff)
+2 - tiff2pdf (libtiff)
+2 - swftools
+2 - strings (binutils)
+2 - readpng (libpng)
+2 - pngfix (libpng)
+2 - openssl
+2 - nginx
+2 - mruby
+2 - mpg321 (libasound)
+2 - libasound
+2 - libarchive
+2 - gzip
+2 - file
+2 - convert
+2 - clamav (libclamav)
+2 - audiofile
+1 - zlib
+1 - xzutils
+1 - xtokkaetama
+1 - xmlwf (expat)
+1 - xmllint (libxml2)
+1 - xgalaga
+1 - wren
+1 - wolfssl
+1 - woff2
+1 - wine
+1 - vim
+1 - tipxd
+1 - tinyvm
+1 - tiffset (libtiff)
+1 - tiffinfo (libtiff)
+1 - tiffcp (libtiff)
+1 - strip
+1 - squirrel mail
+1 - speexenc 
+1 - socat
+1 - snort
+1 - sharutils
+1 - sfconvert (audiofile)
+1 - sam2p
+1 - rsync
+1 - raptor
+1 - psutils
+1 - ps2pdf
+1 - potrace (libpotrace)
+1 - poppler (libpoppler)
+1 - png2swf (swftools)
+1 - picoc
+1 - perl
+1 - pdftops
+1 - pdftohtml (lipoppler)
+1 - pdftohtml (libpoppler)
+1 - pdftocairo (libcairo)
+1 - pdftocairo
+1 - orzhttpd
+1 - openjpeg
+1 - nconvert
+1 - ncompress
+1 - nasm
+1 - nDPI
+1 - mutool draw (mupdf)
+1 - mudraw
+1 - mplayer
+1 - mpg321
+1 - mpeg3dump (libmpeg3)
+1 - mp3gain
+1 - metacam
+1 - mbse-bbs
+1 - mbedtls
+1 - macOS API
+1 - macOS
+1 - listswf (libming)
+1 - libxslt
+1 - libxml
+1 - libtorrent
+1 - libsass
+1 - libressl
+1 - libpspp
+1 - libncurses
+1 - libmpeg3
+1 - libming
+1 - libksba
+1 - libexif
+1 - libdwarf
+1 - libav
+1 - lepton
+1 - lci
+1 - jpegtran (libjpeg)
+1 - jbig2dev (libjbig2dev)
+1 - iwdconfig
+1 - ioctl handlers
+1 - inspircd
+1 - inkscape
+1 - htpasswd
+1 - htget
+1 - harfbuzz
+1 - gprof
+1 - gnutls
+1 - gnugol
+1 - glftpd
+1 - gif2swf (swftools)
+1 - ghostscript
+1 - firefox
+1 - figtoipe
+1 - fdk-acc
+1 - faceradius
+1 - expat
+1 - exiv2
+1 - exifprobe
+1 - evince
+1 - espruino
+1 - eog
+1 - convert (*libGraphicsMagick)
+1 - cjson
+1 - cjpeg (libjpeg)
+1 - chorme
+1 - cflow
+1 - cer-basic (libksba)
+1 - catdvi
+1 - catdoc
+1 - capstone
+1 - c-ares
+1 - bsdtar (libarchive)
+1 - boringssl
+1 - bison
+1 - binutils (libbfd)
+1 - bib2xml
+1 - bash
+1 - avconv
+1 - autotrace (libautotrace)
+1 - autotrace
+1 - atphttpd
+1 - aspell
+1 - as (bintutils)
+1 - ar (binutils)
+1 - apche
+1 - aeon
+1 - abcm2ps
+1 - a2ps
+1 - Windows
+1 - Virtual devices
+1 - Sablotron
+1 - PHP7
+1 - PHP
+1 - Lua
+1 - Linux
+1 - Javascript engine in Internet Explorer
+1 - ChakracCore
+1 - Android services
+1 - 100 different Linux applications (unknown)

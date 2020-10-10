@@ -1,6 +1,0 @@
-Download: https://www.libav.org/
-
-Command:  avconv -y -i $POC -b 64k OUTPUT
-
-CVE-2018-5684: https://bugzilla.libav.org/show_bug.cgi?id=1110
-CVE-2018-5766: https://bugzilla.libav.org/show_bug.cgi?id=1112

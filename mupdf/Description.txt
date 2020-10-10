@@ -1,5 +1,0 @@
-Download: https://mupdf.com/
-
-Command:  mutool draw $POC
-
-CVE-2018-5686: https://bugs.ghostscript.com/show_bug.cgi?id=698860

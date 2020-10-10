@@ -1,6 +1,0 @@
-Download: https://github.com/libming/libming
-
-Command:  listswf $POC
-
-CVE-2018-5294: https://github.com/libming/libming/issues/98
-CVE-2018-5251: https://github.com/libming/libming/issues/97

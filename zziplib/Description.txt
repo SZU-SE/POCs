@@ -1,8 +1,0 @@
-Download: https://github.com/gdraheim/zziplib
-
-Command:  ./zzdir $POC
-
-CVE-2018-6484: https://github.com/gdraheim/zziplib/issues/14
-CVE-2018-6542: https://github.com/gdraheim/zziplib/issues/17
-CVE-2018-6381: https://github.com/gdraheim/zziplib/issues/12
-CVE-2018-6869: https://github.com/gdraheim/zziplib/issues/22

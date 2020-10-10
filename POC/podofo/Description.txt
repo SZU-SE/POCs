@@ -1,0 +1,10 @@
+Download: http://podofo.sourceforge.net/
+
+Command:  To reproduce the issue, compile libming with UBSAN "-fsanitize=undefined", then execute: podofoimgextract $POC OUTPUT_DIR
+
+CVE-2018-5309: https://bugzilla.redhat.com/show_bug.cgi?id=1532381
+CVE-2018-5295: https://bugzilla.redhat.com/show_bug.cgi?id=1531897
+CVE-2018-5296£ºhttps://bugzilla.redhat.com/show_bug.cgi?id=1531956
+CVE-2018-5783£ºhttps://bugzilla.redhat.com/show_bug.cgi?id=1536179
+CVE-2018-5783£ºhttps://bugzilla.redhat.com/show_bug.cgi?id=1532390
+CVE-2018-6352£ºhttps://bugzilla.redhat.com/show_bug.cgi?id=1539237

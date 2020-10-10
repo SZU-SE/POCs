@@ -1,0 +1,7 @@
+Download: https://github.com/uclouvain/openjpeg
+
+Command:  opj_compress -n 1 -i $POC -o OUTPUT
+
+CVE-2018-5785: https://github.com/uclouvain/openjpeg/issues/1057
+CVE-2018-7727: https://github.com/uclouvain/openjpeg/issues/1053
+CVE-2018-6616: https://github.com/uclouvain/openjpeg/issues/1059
